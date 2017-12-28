@@ -1,0 +1,13 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	dif = diff --minimal -b --word-diff=color --color-words=.
+	show-dropped-stashes = "!f() { git fsck --unreachable | grep commit | cut -d\" \" -f3 | xargs git lg --all; }; f"
+	grep-blame = "!f() { git grep -n \"$1\" | awk -F \":\" 'system(\"git blame \"$1\" -L\"$2\",\"$2)'; }; f"
+[diff]
+	algorithm = patience
+[core]
+	editor = emacs
+[commit]
+	verbose = true
+[rebase]
+        instructionFormat = (%an) %s

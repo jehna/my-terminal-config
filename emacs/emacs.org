@@ -1,0 +1,269 @@
+* Emacs cheat sheet
+ 
+** Window management
+
+C-x 0: Delete current window
+C-x 3: Split window horizontally
+C-x 2: Split window vertically
+C-x 1: Kill all other windows
+C-x o: Switch to other window
+
+** File management
+
+C-x C-s: Save file
+C-x C-w: Save as...
+C-x C-f: Open file
+
+** Text editing
+
+C-e: Move cursor to end of file
+C-a: Move cursor to start of file
+Tab: Indent
+C-x b: Change buffer
+C-k: Kill line
+C-y: Yank
+C-x u: Undo
+E g g: Goto line
+E SPC: Remove whitespace
+
+
+*** Selection
+
+C-x C-p: Select all (page)
+C-SPC: Set selection
+M-w: Copy selection
+
+*** Orgmode
+
+C-c ': Edit code block
+C-c C-p: Jump to previous title
+C-c C-n: Jump to next title
+TAB: Toggle title
+
+** Coding the editor
+
+C-x C-e: Execute some *gasp* LISP!
+
+* Emacs config
+
+This is an emacs config that can be taken from this org-file
+automatically by runnning =(org-babel-load-file)=.
+
+** Basic environment variable setup
+
+These are pretty self-explanatory.
+
+#+BEGIN_SRC emacs-lisp
+  (setq
+   initial-scratch-message ""
+   inhibit-startup-message t
+   visible-bell t
+   )
+#+END_SRC
+
+** Basic environment mode setup
+
+Builtin modes setup to wake up in a distraction-free emacs.
+
+#+BEGIN_SRC emacs-lisp
+  (tool-bar-mode 0)
+  (menu-bar-mode 0)
+#+END_SRC
+
+*** Remove advertisement from the echo area
+
+The bottom echo area displays a message "For information about GNU
+Emacs and the GNU system, type C-h C-a.". This script disables the
+message for good.
+
+#+BEGIN_SRC emacs-lisp
+  (defun display-startup-echo-area-message ())
+#+END_SRC
+
+** Benchmark startup time
+
+A neat way to debug the time it takes to load up the whole emacs. Good
+if you aim for startup speed.
+
+Tsken from:
+https://github.com/Kaali/vj-emacs-0x12#benchmark-emacs-startup
+
+#+BEGIN_SRC emacs-lisp
+  (defconst emacs-start-time (current-time))
+
+  (defun emacs-end-load-time()
+    (let ((elapsed
+           (float-time (time-subtract (current-time) emacs-start-time))))
+      (message "Load time: %.3fs (after-init)" elapsed)))
+
+  (add-hook 'after-init-hook `emacs-end-load-time)
+#+END_SRC
+** Speed up the startup time
+
+Some hacks found to speed up the initial startup time.
+
+*** Adjust GC in startup
+
+Emacs garbage collector tries to use sane settings for an interactive
+environment. It reduced throughput a bit. We can make Emacs start
+faster by adjusting GC on startup and then fallback to interactive
+settings.
+
+#+BEGIN_SRC emacs-lisp
+  (defvar original-gc-cons-threshold gc-cons-threshold)
+  (defvar original-gc-cons-percentage gc-cons-percentage)
+
+  (setq gc-cons-threshold 402653184
+        gc-cons-percentage 0.6)
+
+  (add-hook 'after-init-hook
+            `(lambda () (setq gc-cons-threshold original-gc-cons-threshold
+                              gc-cons-percentage original-gc-cons-percentage)) t)
+
+#+END_SRC
+*** Remove file handlers on startup
+
+Make startup faster by removing all file handlers for the duration of
+the startup. Should not affect initialization with my configuration.
+
+#+BEGIN_SRC emacs-lisp
+  (defvar file-name-handler-alist-old file-name-handler-alist)
+  (setq file-name-handler-alist nil)
+  (add-hook 'after-init-hook
+            `(lambda () (setq file-name-handler-alist file-name-handler-alist-old)) t)
+#+END_SRC
+** Packages setup
+
+Setup packages so they are only loaded on compile-time.
+
+#+BEGIN_SRC emacs-lisp
+  (eval-when-compile
+    (require 'package)
+    (setq package-enable-at-startup nil)
+    (add-to-list 'package-archives
+                 '("melpa" . "https://stable.melpa.org/packages/") t)
+    (package-initialize)
+    (unless (package-installed-p 'use-package)
+      (package-refresh-contents)
+      (package-install 'use-package))
+    )
+  (require 'bind-key)
+#+END_SRC
+
+*** Swiper
+
+Swiper is a great package which allows fast searching
+
+#+BEGIN_SRC emacs-lisp
+  (use-package swiper
+    :after ivy
+    :bind (
+           ("C-s" . swiper)
+           ("C-x C-f" . counsel-find-file)
+           ("M-x" . counsel-M-x)
+           ("C-c j" . counsel-git-grep))
+    )
+#+END_SRC
+
+**** Ivy
+
+Ivy is a completion frontend for the Swiper
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ivy
+    :init (setq ivy-use-virtual-buffers t)
+    :config (ivy-mode 1)
+    )
+#+END_SRC
+
+*** Autocomplete
+
+This package adds autocompletion to Emacs
+
+#+BEGIN_SRC emacs-lisp
+  (use-package auto-complete
+    :init (ac-config-default)
+    :config (global-auto-complete-mode t)
+    )
+#+END_SRC
+
+*** Multiple cursors
+
+Seriously. Who manages to code absolutely anything wihout multiple
+cursor support?
+
+#+BEGIN_SRC emacs-lisp
+  (use-package multiple-cursors
+    :bind (("C-c n" . mc/mark-next-like-this)
+           ("C-c a" . mc/edit-lines))
+    :init (multiple-cursors-mode t)
+    )
+#+END_SRC
+
+*** Magit
+Probably the best Git client after git's official CLI client.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package magit)
+#+END_SRC
+
+*** MMM
+
+MMM Mode is a minor mode for Emacs that allows Multiple Major Modes to
+coexist in one buffer.  It is well-suited to editing:
+
+  * Preprocessed code, such as server-side Ruby, Perl or PHP embedded
+    in HTML
+  * Code generating code, such as HTML output by CGI scripts
+  * Embedded code, such as Javascript in HTML
+  * Literate programming: code interspersed with documentation,
+    e.g. NowebMultiple major modes
+
+#+BEGIN_SRC emacs-lisp
+  (use-package mmm-mode
+    :config
+    (setq mmm-global-mode 'maybe))
+#+END_SRC
+
+*** Eshell
+
+Eshell is a shell-like command interpreter implemented in Emacs Lisp.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package eshell
+     :bind (("C-x m" . eshell)))
+#+END_SRC
+
+*** Projectile
+
+Projectile is a project interaction library for Emacs. Its goal is to
+provide a nice set of features operating on a project level without
+introducing external dependencies (when feasible).
+
+#+BEGIN_SRC emacs-lisp
+  (use-package projectile
+    :demand t
+    :commands projectile-mode
+    :config
+    (setq
+     projectile-keymap-prefix (kbd "C-c p")
+     projectile-completion-system 'ivy
+     projectile-enable-caching nil
+     projectile-indexing-method 'alien
+     projectile-mode-line nil)
+    (projectile-mode))
+#+END_SRC
+
+** Editor setup
+
+Personal modifications to the editor itself
+
+*** Highlight bad characters
+
+It's nasty to have a non-breaking space somewhere in your code. This
+function highlights the nasty characters (npn-breaking spaces and
+tabs) so you can spot them more easily.
+
+#+BEGIN_SRC emacs-lisp
+  (setq nobreak-char-display t)
+#+END_SRC

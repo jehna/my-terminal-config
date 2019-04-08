@@ -13,14 +13,30 @@ folder:
 git clone git@github.com:jehna/my-terminal-config.git ~/.config
 ```
 
-This creates a folder called `.config/` to your home folder. After this you need
-to install the main bash file in your own `~/.bash_profile` file:
+This creates a folder called `.config/` to your home folder.
+
+See app-specific installation instructions below:
+
+### Installing bash
+
+To install the bash config, add the following line to your own `~/.bash_profile` file:
 
 ```
 source ~/.config/bash/main.bash
 ```
 
 This installs the common bash startup scripts from the `bash/` folder.
+
+### Installing brew packages
+
+After installing `brew` to your machine you can use the following command to install
+all global packages:
+
+```
+brew bundle --file=~/.config/brew/Brewfile 
+```
+
+This takes all the dependencies from the Brewfile and installs them on your machine locally
 
 ## Adding new files
 

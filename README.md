@@ -13,7 +13,14 @@ folder:
 git clone git@github.com:jehna/my-terminal-config.git ~/.config
 ```
 
-This creates a folder called `.config/` to your home folder.
+This creates a folder called `.config/` to your home folder. After this you need
+to install the main bash file in your own `~/.bash_profile` file:
+
+```
+source ~/.config/bash/main.bash
+```
+
+This installs the common bash startup scripts from the `bash/` folder.
 
 ## Adding new files
 

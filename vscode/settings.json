@@ -1,0 +1,22 @@
+{
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0,
+  "editor.rulers": [80],
+  "eslint.autoFixOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "editor.renderWhitespace": "all",
+  "editor.renderIndentGuides": false,
+  "files.trimTrailingWhitespace": true,
+  "prettier.disableLanguages": ["scss", "c", "json"],
+  "python.jediEnabled": false,
+  "tslint.autoFixOnSave": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "gitblame.statusBarMessageFormat": "🔥 ${commit.hash_short,5} <${author.name}>",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.formatOnSave": true
+}

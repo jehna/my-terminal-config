@@ -19,7 +19,8 @@ See app-specific installation instructions below:
 
 ### Installing bash
 
-To install the bash config, add the following line to your own `~/.bash_profile` file:
+To install the bash config, add the following line to your own `~/.bash_profile`
+file:
 
 ```
 source ~/.config/bash/main.bash
@@ -29,14 +30,27 @@ This installs the common bash startup scripts from the `bash/` folder.
 
 ### Installing brew packages
 
-After installing `brew` to your machine you can use the following command to install
-all global packages:
+After installing `brew` to your machine you can use the following command to
+install all global packages:
 
 ```
-brew bundle --file=~/.config/brew/Brewfile 
+brew bundle --file=~/.config/brew/Brewfile
 ```
 
-This takes all the dependencies from the Brewfile and installs them on your machine locally
+This takes all the dependencies from the Brewfile and installs them on your
+machine locally
+
+### Installing VSCode configurations
+
+The configuraitons need to be linked from their original place to use the
+configs from this repo:
+
+```
+rm ~/Library/Application\ Support/Code/User/settings.json
+rm ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+```
 
 ## Adding new files
 

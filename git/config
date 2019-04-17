@@ -7,7 +7,7 @@
 [diff]
 	algorithm = patience
 [core]
-	editor = emacs
+	editor = code --wait
 [commit]
 	verbose = true
 [rebase]

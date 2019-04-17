@@ -1,4 +1,5 @@
 # My Terminal configurations
+
 > So I don't need to feel poor when I get a new computer
 
 Generally this is just contents of my `~/.config/` folder. It contains
@@ -39,6 +40,17 @@ brew bundle --file=~/.config/brew/Brewfile
 
 This takes all the dependencies from the Brewfile and installs them on your
 machine locally
+
+#### Updating Homebrew list of packages
+
+When you install a new Homebrew package (run `brew install ...`), you should
+update your global package list by running:
+
+```
+brew bundle dump -f --file=~/.config/brew/Brewfile
+```
+
+This updates your local list of installed Homebrew packages
 
 ### Installing VSCode configurations
 

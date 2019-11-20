@@ -15,3 +15,6 @@ source $(dirname $BASH_SOURCE)/java.bash
 
 # Ruby specific configs
 source $(dirname $BASH_SOURCE)/ruby.bash
+
+# Aliases
+source $(dirname $BASH_SOURCE)/aliases.bash

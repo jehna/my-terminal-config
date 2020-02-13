@@ -18,3 +18,6 @@ source $(dirname $BASH_SOURCE)/ruby.bash
 
 # Aliases
 source $(dirname $BASH_SOURCE)/aliases.bash
+
+# Homebrew
+source $(dirname $BASH_SOURCE)/homebrew.bash

@@ -10,5 +10,6 @@
 	editor = code --wait
 [commit]
 	verbose = true
+	gpgsign = true
 [rebase]
         instructionFormat = (%an) %s

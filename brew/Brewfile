@@ -1,3 +1,4 @@
+tap "clojure/tools"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
@@ -12,5 +13,6 @@ brew "nvm"
 brew "postgresql"
 brew "redis"
 brew "yarn"
+brew "clojure/tools/clojure", args: ["devel"]
 brew "heroku/brew/heroku"
 cask "fastlane"

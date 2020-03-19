@@ -13,5 +13,40 @@
   {
     "key": "shift+alt+a",
     "command": "editor.action.reindentlines"
+  },
+  {
+    "key": "alt+shift+tab",
+    "command": "org.decrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+left",
+    "command": "-org.decrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+tab",
+    "command": "org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
   }
 ]

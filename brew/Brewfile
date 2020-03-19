@@ -13,6 +13,7 @@ brew "node"
 brew "nvm"
 brew "postgresql"
 brew "redis", restart_service: true
+brew "shellcheck"
 brew "yarn"
 brew "clojure/tools/clojure", args: ["devel"]
 brew "heroku/brew/heroku"

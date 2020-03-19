@@ -12,7 +12,7 @@ brew "maven"
 brew "node"
 brew "nvm"
 brew "postgresql"
-brew "redis"
+brew "redis", restart_service: true
 brew "yarn"
 brew "clojure/tools/clojure", args: ["devel"]
 brew "heroku/brew/heroku"

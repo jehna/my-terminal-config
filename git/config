@@ -9,6 +9,9 @@
 		awk '{if ($3 == \"[gone]\") print $1}' | \
 		xargs git branch -D; \
 	}; f"
+	cleanup-merged-branches = "!f() { \
+		git branch -d $(git branch --format '%(refname:short)' --merged master --no-contains master); \
+	}; f"
 [diff]
 	algorithm = patience
 [core]

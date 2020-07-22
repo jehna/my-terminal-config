@@ -24,3 +24,6 @@ source "$(dirname $BASH_SOURCE)/homebrew.bash"
 
 # Enable gnupg
 source "$(dirname $BASH_SOURCE)/gnupg.bash"
+
+# Flutter configs
+source "$(dirname $BASH_SOURCE)/flutter.bash"

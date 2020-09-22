@@ -64,6 +64,25 @@ ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/se
 ln -s ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ```
 
+#### Installing VSCode plugins
+
+This repository also has a "vscode packages file", wihch you can use to track
+the installed plugins for VSCode. You can install all packages by running:
+
+```
+code --list-extensions | comm -13 - ~/.config/vscode/extensions.list | xargs -I {} code --install-extension {} # Adds new extensions
+code --list-extensions | comm -23 - ~/.config/vscode/extensions.list | xargs -I {} code --uninstall-extension {} # Removes old extensions
+```
+
+#### Updating plugin list
+
+Keeping the plugin list up to date requires manual work (like with Homebrew),
+and you can update the extension list by running:
+
+```
+code --list-extensions > ~/.config/vscode/extensions.list
+```
+
 ## Adding new files
 
 If you fork this repo and add new configurations, make sure that you don't

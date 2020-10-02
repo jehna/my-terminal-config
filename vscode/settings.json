@@ -35,5 +35,9 @@
     "enabled": false,
     "printEngine": "pprint",
     "width": 120
-  }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
 }

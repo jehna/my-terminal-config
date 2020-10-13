@@ -48,5 +48,10 @@
     "key": "alt+right",
     "command": "-org.incrementContext",
     "when": "editorLangId == 'org'"
-  }
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "false"
+  },
 ]

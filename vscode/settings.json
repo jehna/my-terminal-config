@@ -39,5 +39,18 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[clojure]": {
+    "editor.autoClosingBrackets": "beforeWhitespace",
+    "editor.autoClosingQuotes": "beforeWhitespace",
+    "editor.formatOnType": true,
+    "editor.autoIndent": "advanced",
+    "editor.formatOnPaste": true,
+    "files.trimTrailingWhitespace": false,
+    "editor.matchBrackets": "always",
+    "editor.renderIndentGuides": false,
+    "editor.parameterHints.enabled": false,
+  },
+  "calva.paredit.defaultKeyMap": "none",
+  "calva.evalOnSave": true
 }

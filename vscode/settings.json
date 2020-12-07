@@ -40,6 +40,19 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "fcrespo82.markdown-table-formatter"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.scrollback": 10000,
   "[clojure]": {
     "editor.autoClosingBrackets": "beforeWhitespace",
     "editor.autoClosingQuotes": "beforeWhitespace",

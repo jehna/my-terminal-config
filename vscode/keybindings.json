@@ -54,4 +54,9 @@
     "command": "workbench.action.terminal.openNativeConsole",
     "when": "false"
   },
+  {
+    "key": "ctrl+enter",
+    "command": "extension.pgsql.runCurrentStatement",
+    "when": "editorLangId == 'sql'"
+  },
 ]

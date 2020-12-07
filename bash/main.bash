@@ -30,3 +30,6 @@ source "$(dirname $BASH_SOURCE)/gnupg.bash"
 
 # Flutter configs
 source "$(dirname $BASH_SOURCE)/flutter.bash"
+
+# Python configs
+source "$(dirname $BASH_SOURCE)/python.bash"

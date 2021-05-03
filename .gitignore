@@ -1,3 +1,12 @@
 # Google stuff
 configstore
 gcloud
+
+# Don't include Brewfile lockfile, I want the latest and greatest versions only
+brew/Brewfile.lock.json
+
+# Cargo/Rust internal files
+xbuild
+
+# Gtk config
+gtk-2.0

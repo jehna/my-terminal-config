@@ -15,3 +15,13 @@ to_gif() {
       ffmpeg -i "$INPUT" -i pipe: -lavfi $CONVERSION_FILTERS -r 18 -gifflags +transdiff "$OUTPUT"
 }
 
+# find_fucker
+#
+# Finds the fucker that's keeping your port as a hostage
+#
+# Usage:
+# find_fucker 5000
+#
+function find_fucker() {
+  lsof -nP "-iTCP:$1" | grep LISTEN
+}

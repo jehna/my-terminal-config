@@ -25,3 +25,13 @@ to_gif() {
 function find_fucker() {
   lsof -nP "-iTCP:$1" | grep LISTEN
 }
+
+# monday
+#
+# Manually run repetitive tasks (like installing updates). Should be ran on
+# every Monday.
+
+function monday() {
+  brew upgrade                  # Upgraade most Homebrew packages
+  brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
+}

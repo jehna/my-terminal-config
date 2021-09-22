@@ -32,6 +32,17 @@ function find_fucker() {
 # every Monday.
 
 function monday() {
+  # Upgrade everything
   brew upgrade                  # Upgraade most Homebrew packages
   brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
+  brew services restart redis   # Redis needs a manual restart after `brew upgrade`
+  softwareupdate -ia            # Mac's own software update
+  mas upgrade                   # Programmatic App Store update
+
+  # Back up recently installed apps and plugins
+  code --list-extensions > ~/.config/vscode/extensions.list # VSConde plugins
+  brew bundle dump -f --file=~/.config/brew/Brewfile        # Brewfile
+
+  # Upgrading gpg needs a restart, so let's do one just in case
+  gpgconf --kill all
 }

@@ -46,3 +46,9 @@ function monday() {
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
 }
+
+# espresso
+#
+# Keep mac alive for the execution of a task
+
+alias espresso="caffeinate -sm"

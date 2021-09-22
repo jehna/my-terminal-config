@@ -1,4 +1,4 @@
-Tyriar.lorem-ipsum
+alexcvzz.vscode-sqlite
 avli.clojure
 betterthantomorrow.calva
 borkdude.clj-kondo
@@ -6,16 +6,19 @@ Dart-Code.dart-code
 Dart-Code.flutter
 dbaeumer.vscode-eslint
 dtsvet.vscode-wasm
+eamodio.gitlens
 esbenp.prettier-vscode
 fcrespo82.markdown-table-formatter
 golang.go
 jpoissonnier.vscode-styled-components
 ms-ossdata.vscode-postgresql
 ms-vscode.vscode-typescript-tslint-plugin
+redhat.vscode-yaml
 rust-lang.rust
 stkb.rewrap
 stylelint.vscode-stylelint
 timonwong.shellcheck
+Tyriar.lorem-ipsum
+vadimcn.vscode-lldb
 vscode-org-mode.org-mode
-waderyan.gitblame
 wengerk.highlight-bad-chars

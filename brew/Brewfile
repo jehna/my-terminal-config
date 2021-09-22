@@ -15,6 +15,7 @@ brew "gnupg"
 brew "gnuplot"
 brew "jenv"
 brew "leiningen"
+brew "mas"
 brew "maven"
 brew "node"
 brew "nvm"
@@ -41,3 +42,9 @@ cask "slack"
 cask "spotify"
 cask "viscosity"
 cask "zoom"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835

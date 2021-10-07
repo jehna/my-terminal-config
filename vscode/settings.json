@@ -73,5 +73,8 @@
   },
   "files.associations": {
     "COMMIT_EDITMSG": "git-commit"
+  },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
   }
 }

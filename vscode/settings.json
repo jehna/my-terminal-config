@@ -76,5 +76,6 @@
   },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code"
-  }
+  },
+  "editor.inlineSuggest.enabled": true
 }

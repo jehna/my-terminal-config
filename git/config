@@ -19,5 +19,6 @@
 	gpgsign = true
 [rebase]
 	instructionFormat = (%an) %s
+	autostash=true
 [pull]
 	rebase = true

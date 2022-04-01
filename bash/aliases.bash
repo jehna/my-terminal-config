@@ -33,6 +33,7 @@ function find_fucker() {
 
 function monday() {
   # Upgrade everything
+  brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgraade most Homebrew packages
   brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
   brew services restart redis   # Redis needs a manual restart after `brew upgrade`

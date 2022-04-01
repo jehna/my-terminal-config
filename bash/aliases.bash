@@ -12,7 +12,7 @@ to_gif() {
     CONVERSION_FILTERS="paletteuse=bayer_scale=2:dither=none:diff_mode=rectangle"
 
     ffmpeg -i "$INPUT" -vf palettegen=stats_mode=diff pipe:.png |
-      ffmpeg -i "$INPUT" -i pipe: -lavfi $CONVERSION_FILTERS -r 18 -gifflags +transdiff "$OUTPUT"
+      ffmpeg -i "$INPUT" -i pipe: -lavfi $CONVERSION_FILTERS -r 30 -gifflags +transdiff "$OUTPUT"
 }
 
 # find_fucker

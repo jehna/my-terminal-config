@@ -83,5 +83,12 @@
     "yaml": false,
     "plaintext": false,
     "markdown": true
+  },
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": ["-l"],
+      "icon": "terminal-bash"
+    }
   }
 }

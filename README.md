@@ -52,19 +52,16 @@ brew bundle dump -f --file=~/.config/brew/Brewfile
 
 This updates your local list of installed Homebrew packages
 
-### Installing VSCode configurations
+### Setting up the machine to wanted configs with Ansible
 
-The configuraitons need to be linked from their original place to use the
-configs from this repo:
+Ansible automates most things for a fresh MacOS install. The provided
+`playbook.yml` does most things, although restart may be needed after running:
 
 ```
-rm ~/Library/Application\ Support/Code/User/settings.json
-rm ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s ~/.config/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.config/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ansible-playbook ansible/playbook.yml
 ```
 
-#### Installing VSCode plugins
+### Installing VSCode plugins
 
 This repository also has a "vscode packages file", wihch you can use to track
 the installed plugins for VSCode. You can install all packages by running:

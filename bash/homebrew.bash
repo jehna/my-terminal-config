@@ -1,3 +1,5 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Autocomplete configuraton as per:
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-bash
 #

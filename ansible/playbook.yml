@@ -1,0 +1,60 @@
+---
+- name: Setup MacOS
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Set scroll direction
+      osx_defaults:
+        domain: NSGlobalDomain
+        key: com.apple.swipescrolldirection
+        type: bool
+        value: false
+
+    - name: Trackpad corner is secondary mouse click
+      osx_defaults:
+        domain: com.apple.AppleMultitouchTrackpad
+        key: TrackpadCornerSecondaryClick
+        type: int
+        value: 2
+
+    - name: Enable trackpad right click
+      osx_defaults:
+        domain: com.apple.AppleMultitouchTrackpad
+        key: TrackpadRightClick
+        type: bool
+        value: true
+
+    - name: Leave my desktops alone!
+      osx_defaults:
+        domain: "com.apple.dock"
+        key: "mru-spaces"
+        type: "bool"
+        value: false
+      notify: Restart Dock
+
+    - name: "Dock - Persistent Apps"
+      notify: Restart Dock
+      osx_defaults:
+        domain: "com.apple.dock"
+        key: "persistent-apps"
+        type: array
+        value:
+          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Safari.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
+          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
+          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
+          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
+          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
+
+    - name: "Set VSCode files"
+      file:
+        state: link
+        force: true
+        src: "~/.config/vscode/{{ item }}"
+        dest: "~/Library/Application Support/Code/User/{{ item }}"
+      loop:
+        - "settings.json"
+        - "keybindings.json"
+
+  handlers:
+    - name: Restart Dock
+      command: killall Dock

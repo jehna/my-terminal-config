@@ -2,7 +2,6 @@
   "editor.tabSize": 2,
   "workbench.startupEditor": "newUntitledFile",
   "editor.renderWhitespace": "all",
-  "editor.renderIndentGuides": false,
   "files.trimTrailingWhitespace": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -90,5 +89,6 @@
       "args": ["-l"],
       "icon": "terminal-bash"
     }
-  }
+  },
+  "editor.guides.indentation": false
 }

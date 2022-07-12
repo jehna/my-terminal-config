@@ -60,3 +60,11 @@ function configure_new_mac() {
   # See: https://www.reddit.com/r/eero/comments/aom1ut/5x_speed_increase_on_macbook_pro_with_a_terminal/
   sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport prefs joinMode=Strongest joinModeFallback=KeepLooking
 }
+
+# pingsay
+#
+# Privides an audible cue about the system being online or not
+#
+function pingsay() {
+  ping 8.8.8.8 2>/dev/null | sed -l 's/.*bytes.*/yay/; s/.*timeout.*/nah/' | xargs -I {} say {}
+}

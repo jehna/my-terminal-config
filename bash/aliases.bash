@@ -68,3 +68,13 @@ function configure_new_mac() {
 function pingsay() {
   ping 8.8.8.8 2>/dev/null | sed -l 's/.*bytes.*/yay/; s/.*timeout.*/nah/' | xargs -I {} say {}
 }
+
+# figsay
+# cowsay with filget text
+#
+function figsay() {
+  TEXT="$@"
+  COWS=$(cowsay -l | tail -n+2 | awk -F ' ' '{for (i=1; i<=NF; i++) print $i}')
+  FIGS=$(ls $(figlet -I2))
+  figlet -f "$(echo "$FIGS" | shuf -n 1)" "$TEXT" | cowsay -nf "$(echo "$COWS" | shuf -n 1)"
+}

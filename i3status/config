@@ -1,0 +1,10 @@
+general {
+  colors = true
+}
+
+order += "tztime helsinki"
+
+tztime helsinki {
+  format = "⏰ %d.%m.%Y %H:%M"
+  timezone = "Europe/Helsinki"
+}

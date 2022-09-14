@@ -17,6 +17,13 @@
         type: int
         value: 2
 
+    - name: xQuartz dpi
+      osx_defaults:
+        domain: org.xquartz.X11
+        key: dpi
+        type: int
+        value: 254
+
     - name: Enable trackpad right click
       osx_defaults:
         domain: com.apple.AppleMultitouchTrackpad

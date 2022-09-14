@@ -90,5 +90,7 @@
       "icon": "terminal-bash"
     }
   },
-  "editor.guides.indentation": false
+  "editor.guides.indentation": false,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": false
 }

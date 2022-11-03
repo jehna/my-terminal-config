@@ -5,10 +5,16 @@
 	show-lost-branches = "!f() { git fsck --lost-found | grep commit | cut -d\" \" -f3 | xargs git lg --all; }; f"
 	grep-blame = "!f() { git grep -n \"$1\" | awk -F \":\" 'system(\"git blame \"$1\" -L\"$2\",\"$2)'; }; f"
 	cleanup = "!f() { \
-		git branch -d $(git branch --format '%(refname:short)' --merged master --no-contains master); \
-		git branch -v | \
-		awk '{if ($3 == \"[gone]\") print $1}' | \
-		xargs git branch -D; \
+		BRANCHES_MERGED_TO_MASTER=$(git branch --format '%(refname:short)' --merged master --no-contains master); \
+		BRANCHES_WITH_GONE_UPSTREAM=$(git branch -vv | grep gone | awk '{print $1}'); \
+		\
+		if [ -z \"$BRANCHES_MERGED_TO_MASTER\" ] && [ -z \"$BRANCHES_WITH_GONE_UPSTREAM\" ]; then \
+			echo \"No branches to delete\"; \
+			exit 0; \
+		fi; \
+		\
+		BRANCHES_TO_DELETE=$(echo \"$BRANCHES_MERGED_TO_MASTER\" \"$BRANCHES_WITH_GONE_UPSTREAM\" | sort | uniq); \
+		git branch -D $BRANCHES_TO_DELETE; \
 	}; f"
 [diff]
 	algorithm = patience

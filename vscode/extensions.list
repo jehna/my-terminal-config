@@ -1,6 +1,8 @@
 alexcvzz.vscode-sqlite
 avli.clojure
+bbenoist.Nix
 betterthantomorrow.calva
+bitlang.cobol
 borkdude.clj-kondo
 Dart-Code.dart-code
 Dart-Code.flutter
@@ -14,6 +16,7 @@ golang.go
 ms-ossdata.vscode-postgresql
 ms-vscode.makefile-tools
 ms-vscode.vscode-typescript-tslint-plugin
+rebornix.ruby
 redhat.vscode-yaml
 rust-lang.rust
 rust-lang.rust-analyzer
@@ -24,3 +27,4 @@ Tyriar.lorem-ipsum
 vadimcn.vscode-lldb
 vscode-org-mode.org-mode
 wengerk.highlight-bad-chars
+wingrunr21.vscode-ruby

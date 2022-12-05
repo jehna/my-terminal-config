@@ -16,6 +16,13 @@
 		BRANCHES_TO_DELETE=$(echo \"$BRANCHES_MERGED_TO_MASTER\" \"$BRANCHES_WITH_GONE_UPSTREAM\" | sort | uniq); \
 		git branch -D $BRANCHES_TO_DELETE; \
 	}; f"
+	change-timestamp = "!f() { \
+		OFFSET=${1:-'-12H'}; \
+		DATE=$(date -v$OFFSET); \
+		GIT_AUTHOR_DATE=$DATE \
+		GIT_COMMITTER_DATE=$DATE \
+		git commit --amend --no-edit --date \"$DATE\"; \
+	}; f"
 [diff]
 	algorithm = patience
 [core]

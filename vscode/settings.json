@@ -92,5 +92,6 @@
   },
   "editor.guides.indentation": false,
   "dart.debugExternalPackageLibraries": true,
-  "dart.debugSdkLibraries": false
+  "dart.debugSdkLibraries": false,
+  "debug.javascript.autoAttachFilter": "smart"
 }

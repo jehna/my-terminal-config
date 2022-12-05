@@ -36,7 +36,6 @@ function monday() {
   brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgraade most Homebrew packages
   brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
-  brew services restart redis   # Redis needs a manual restart after `brew upgrade`
   softwareupdate -ia            # Mac's own software update
   mas upgrade                   # Programmatic App Store update
 

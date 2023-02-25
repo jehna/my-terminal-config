@@ -12,9 +12,12 @@ eamodio.gitlens
 esbenp.prettier-vscode
 fcrespo82.markdown-table-formatter
 GitHub.copilot
+GitHub.vscode-codeql
 golang.go
+hbenl.vscode-test-explorer
 ms-ossdata.vscode-postgresql
 ms-vscode.makefile-tools
+ms-vscode.test-adapter-converter
 ms-vscode.vscode-typescript-tslint-plugin
 rebornix.ruby
 redhat.vscode-yaml
@@ -26,5 +29,6 @@ timonwong.shellcheck
 Tyriar.lorem-ipsum
 vadimcn.vscode-lldb
 vscode-org-mode.org-mode
+Vue.volar
 wengerk.highlight-bad-chars
 wingrunr21.vscode-ruby

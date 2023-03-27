@@ -94,5 +94,8 @@
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": false,
   "debug.javascript.autoAttachFilter": "smart",
-  "codeQL.telemetry.enableTelemetry": true
+  "codeQL.telemetry.enableTelemetry": true,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

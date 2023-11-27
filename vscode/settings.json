@@ -78,9 +78,18 @@
   },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
+    "COBOL": true,
+    "COBOLIT": true,
+    "ACUCOBOL": true,
+    "COBOL_MF_LISTFILE": false,
+    "COBOL_PCOB_LISTFILE": false,
+    "COBOL_ACU_LISTFILE": false,
+    "COBOL_MF_PREP": false,
+    "mfu": false,
+    "utreport": false,
     "*": true,
     "yaml": false,
-    "plaintext": false,
+    "plaintext": true,
     "markdown": true
   },
   "terminal.integrated.profiles.osx": {
@@ -97,5 +106,13 @@
   "codeQL.telemetry.enableTelemetry": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "terminal.integrated.inheritEnv": false,
+  "jupyter.askForKernelRestart": false,
+  "hexeditor.columnWidth": 16,
+  "hexeditor.showDecodedText": true,
+  "hexeditor.defaultEndianness": "little",
+  "hexeditor.inspectorType": "aside",
+  "slint.preview.style": "cupertino-dark",
+  "dart.openDevTools": "flutter"
 }

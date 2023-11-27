@@ -23,3 +23,9 @@ flutter
 
 # Podman configs
 containers
+
+# Packer
+packer
+
+# Wfuzz
+wfuzz

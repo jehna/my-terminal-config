@@ -6,7 +6,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.suggestSelection": "first",
   "org.todoKeywords": ["TODO", "DOING", "DONE", "BLOCKED"],
@@ -42,7 +42,8 @@
     "files.trimTrailingWhitespace": false,
     "editor.matchBrackets": "always",
     "editor.renderIndentGuides": false,
-    "editor.parameterHints.enabled": false
+    "editor.parameterHints.enabled": false,
+    "editor.guides.indentation": false
   },
   "calva.paredit.defaultKeyMap": "none",
   "calva.evalOnSave": true,
@@ -54,7 +55,8 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[sql]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -102,7 +104,7 @@
   "editor.guides.indentation": false,
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": false,
-  "debug.javascript.autoAttachFilter": "smart",
+  "debug.javascript.autoAttachFilter": "disabled",
   "codeQL.telemetry.enableTelemetry": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

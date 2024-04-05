@@ -66,5 +66,15 @@
   {
     "key": "cmd+numpad0",
     "command": "-workbench.action.zoomReset"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "sqlite.runDocumentQuery",
+    "when": "editorLangId =~ /(sql|sqlite)/"
+  },
+  {
+    "key": "shift+cmd+q",
+    "command": "-sqlite.runDocumentQuery",
+    "when": "editorLangId =~ /(sql|sqlite)/"
   }
 ]

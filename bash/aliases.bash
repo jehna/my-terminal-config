@@ -77,3 +77,20 @@ function figsay() {
   FIGS=$(ls $(figlet -I2))
   figlet -f "$(echo "$FIGS" | shuf -n 1)" "$TEXT" | cowsay -nf "$(echo "$COWS" | shuf -n 1)"
 }
+
+# A fuzzy finder for a subdirectory
+#
+# Uses git to limit the amount of directories to search, otherwise good luck on
+# searching through a node_modules folder.
+#
+# Usage: cdf
+#
+function cdf() {
+  IS_GIT_INITIALIZED=$(git rev-parse --is-inside-work-tree 2>/dev/null)
+  if [ "$IS_GIT_INITIALIZED" != "true" ]; then
+    echo "Not a git repository"
+    return
+  fi
+  SUBDIRS=$(git ls-tree --name-only -d -r HEAD)
+  cd "$(echo "$SUBDIRS" | fzf)" || return
+}

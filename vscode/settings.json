@@ -104,7 +104,7 @@
   "editor.guides.indentation": false,
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": false,
-  "debug.javascript.autoAttachFilter": "disabled",
+  "debug.javascript.autoAttachFilter": "always",
   "codeQL.telemetry.enableTelemetry": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -116,5 +116,6 @@
   "hexeditor.defaultEndianness": "little",
   "hexeditor.inspectorType": "aside",
   "slint.preview.style": "cupertino-dark",
-  "dart.openDevTools": "flutter"
+  "dart.openDevTools": "flutter",
+  "gitlens.mode.active": "zen"
 }

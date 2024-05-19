@@ -13,9 +13,6 @@ source "$(dirname "$BASH_SOURCE")/fastlane.bash"
 # NVM specific configs
 source "$(dirname "$BASH_SOURCE")/nvm.bash"
 
-# Java specific configs
-source "$(dirname "$BASH_SOURCE")/java.bash"
-
 # Ruby specific configs
 source "$(dirname "$BASH_SOURCE")/ruby.bash"
 

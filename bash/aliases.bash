@@ -33,7 +33,6 @@ function find_fucker() {
 
 function monday() {
   # Upgrade everything
-  brew cleanup                  # Remove old versions from the cellar
   brew upgrade                  # Upgraade most Homebrew packages
   brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
   softwareupdate -ia            # Mac's own software update
@@ -45,6 +44,9 @@ function monday() {
 
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all
+
+  # Remove old versions from the cellar
+  brew cleanup
 }
 
 # espresso

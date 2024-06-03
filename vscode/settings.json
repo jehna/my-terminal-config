@@ -117,5 +117,6 @@
   "hexeditor.inspectorType": "aside",
   "slint.preview.style": "cupertino-dark",
   "dart.openDevTools": "flutter",
-  "gitlens.mode.active": "zen"
+  "gitlens.mode.active": "zen",
+  "github.copilot.editor.enableAutoCompletions": true
 }

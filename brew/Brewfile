@@ -5,74 +5,143 @@ tap "homebrew/bundle"
 tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "michaeleisel/zld"
+# Command-line interface for SQLite
 brew "sqlite"
+# Automate deployment, configuration, and upgrading
 brew "ansible"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Generic machine emulator and virtualizer
 brew "qemu"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Configurable talking characters in ASCII art
 brew "cowsay"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
 brew "docker-compose"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Play, record, convert, and stream audio and video
 brew "ffmpeg"
+# Banner-like program prints strings as ASCII art
 brew "figlet"
+# Command-line tools for fly.io services
 brew "flyctl"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
+# GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Command-driven, interactive function plotting
 brew "gnuplot"
+# Dex to Java decompiler
 brew "jadx"
+# Manage your Java environment
 brew "jenv"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Build tool for Clojure
 brew "leiningen"
+# Pager program similar to more
 brew "less"
+# Mac App Store command-line interface
 brew "mas"
+# Java-based project management
 brew "maven"
+# Utility for managing network connections
 brew "netcat"
+# Platform built on V8 to build network applications
 brew "node"
+# Manage multiple Node.js versions
 brew "nvm"
+# Object-relational database system
 brew "postgresql@15"
+# Python version management
 brew "pyenv"
+# Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Safe, concurrent, practical language
 brew "rust"
+# Build tool for Scala projects
 brew "sbt"
+# Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
+# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Graphical network analyzer and capture tool
 brew "wireshark", link: false
+# JavaScript package manager
 brew "yarn"
+# Download YouTube videos from the command-line
 brew "youtube-dl"
+# The Clojure Programming Language
 brew "clojure/tools/clojure"
+# Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# Draw and interact with physical systems
 cask "algodoo"
+# Multi-track audio editor and recorder
 cask "audacity"
+# 3D creation suite
 cask "blender"
+# Web security testing toolkit
 cask "burp-suite"
+# Semantic code analysis engine
 cask "codeql"
+# Voice and text chat software
 cask "discord"
+# Web browser
 cask "firefox"
+# UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
+# Free and open-source image editor
 cask "gimp"
+# Web browser
 cask "google-chrome"
+# Vector graphics editor
 cask "inkscape"
+# Open source intelligence and graphical link analysis tool
 cask "maltego"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Client program for the OpenVPN Access Server
 cask "openvpn-connect"
+# App wrapper for Postgres
 cask "postgres-unofficial"
+# Team communication and collaboration software
 cask "slack"
+# Music streaming service
 cask "spotify"
+# Learn how to play the piano using falling notes
 cask "synthesia"
+# Open-source virtual modular synthesiser
 cask "vcv-rack"
+# OpenVPN client with AppleScript support
 cask "viscosity"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
+# Network protocol analyzer
 cask "wireshark"
+# Open-source version of the X.Org X Window System
 cask "xquartz"
+# Free and open source web app scanner
 cask "zap"
+# Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "GarageBand", id: 682658836

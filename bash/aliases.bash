@@ -93,6 +93,7 @@ function cdf() {
     echo "Not a git repository"
     return
   fi
-  SUBDIRS=$(git ls-tree --name-only -d -r HEAD)
+  GIT_ROOT=$(git rev-parse --show-toplevel)
+  SUBDIRS=$(git ls-tree --name-only -d -r HEAD "$GIT_ROOT")
   cd "$(echo "$SUBDIRS" | fzf)" || return
 }

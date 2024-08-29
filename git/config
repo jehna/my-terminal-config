@@ -16,7 +16,6 @@
 		BRANCHES_TO_DELETE=$(echo \"$BRANCHES_MERGED_TO_MASTER\" \"$BRANCHES_WITH_GONE_UPSTREAM\" | sort | uniq); \
 		git branch -D $BRANCHES_TO_DELETE; \
 	}; f"
-	# Squh script is in "aliases" subfolder
 	squash = !bash ~/.config/git/aliases/squash.sh
 	change-timestamp = "!f() { \
 		OFFSET=${1:-'-12H'}; \

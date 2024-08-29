@@ -33,3 +33,6 @@ source "$(dirname "$BASH_SOURCE")/python.bash"
 
 # Cargo/Rust configs
 source "$(dirname "$BASH_SOURCE")/rust.bash"
+
+# npm autocomplete
+source "$(dirname "$BASH_SOURCE")/npm.bash"

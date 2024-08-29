@@ -16,6 +16,16 @@
 		BRANCHES_TO_DELETE=$(echo \"$BRANCHES_MERGED_TO_MASTER\" \"$BRANCHES_WITH_GONE_UPSTREAM\" | sort | uniq); \
 		git branch -D $BRANCHES_TO_DELETE; \
 	}; f"
+	squash = "!f() { \
+		COMMIT_HASH=$1; \
+		if [ -z \"$COMMIT_HASH\" ]; then \
+			echo \"Please provide a commit hash\"; \
+			exit 1; \
+		fi; \
+		REST_OF_ARGS=${@:2}; \
+		GIT_EDITOR=: git commit  --no-edit --squash $COMMIT_HASH $REST_OF_ARGS; \
+		GIT_EDITOR=: git rebase --autosquash --autostash -i $COMMIT_HASH^; \
+	}; f"
 	change-timestamp = "!f() { \
 		OFFSET=${1:-'-12H'}; \
 		DATE=$(date -v$OFFSET); \

@@ -94,6 +94,8 @@ function cdf() {
     return
   fi
   GIT_ROOT=$(git rev-parse --show-toplevel)
+  GIT_ROOT_RELATIVE=$(realpath --relative-to="$HOME" "$GIT_ROOT")
   SUBDIRS=$(git ls-tree --name-only -d -r HEAD "$GIT_ROOT")
-  cd "$(echo "$SUBDIRS" | fzf)" || return
+  SUBDIRS_INCLUDING_ROOT=$(echo -e "$GIT_ROOT_RELATIVE\n$SUBDIRS")
+  cd "$(echo "$SUBDIRS_INCLUDING_ROOT" | fzf)" || return
 }

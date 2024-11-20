@@ -36,3 +36,6 @@ source "$(dirname "$BASH_SOURCE")/rust.bash"
 
 # npm autocomplete
 source "$(dirname "$BASH_SOURCE")/npm.bash"
+
+# Cursor
+source "$(dirname "$BASH_SOURCE")/cursor.bash"

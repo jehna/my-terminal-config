@@ -76,5 +76,9 @@
     "key": "shift+cmd+q",
     "command": "-sqlite.runDocumentQuery",
     "when": "editorLangId =~ /(sql|sqlite)/"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.debug.panel.action.clearReplAction"
   }
 ]

@@ -15,8 +15,12 @@ github.copilot
 github.copilot-chat
 github.vscode-codeql
 golang.go
+hashicorp.hcl
 hbenl.vscode-test-explorer
 inferrinizzard.prettier-sql-vscode
+ms-dotnettools.csdevkit
+ms-dotnettools.csharp
+ms-dotnettools.vscode-dotnet-runtime
 ms-ossdata.vscode-postgresql
 ms-python.debugpy
 ms-python.python
@@ -37,6 +41,7 @@ stylelint.vscode-stylelint
 timonwong.shellcheck
 tyriar.lorem-ipsum
 vadimcn.vscode-lldb
+visualstudiotoolsforunity.vstuc
 vscode-org-mode.org-mode
 vue.volar
 wengerk.highlight-bad-chars

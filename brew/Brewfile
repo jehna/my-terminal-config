@@ -1,5 +1,6 @@
 tap "clojure/tools"
 tap "dart-lang/dart"
+tap "hashicorp/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask-versions"
@@ -13,8 +14,6 @@ brew "ansible"
 brew "awscli"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# Generic machine emulator and virtualizer
-brew "qemu"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # GNU File, Shell, and Text utilities
@@ -27,6 +26,10 @@ brew "docker"
 brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
+# Easiest way to build and release mobile apps
+brew "fastlane"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Play, record, convert, and stream audio and video
@@ -39,6 +42,8 @@ brew "flyctl"
 brew "fzf"
 # GitHub command-line tool
 brew "gh"
+# Git extension for versioning large files
+brew "git-lfs"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
@@ -55,6 +60,8 @@ brew "jq"
 brew "leiningen"
 # Pager program similar to more
 brew "less"
+# LLM inference in C/C++
+brew "llama.cpp"
 # Mac App Store command-line interface
 brew "mas"
 # Java-based project management
@@ -65,21 +72,31 @@ brew "netcat"
 brew "node"
 # Manage multiple Node.js versions
 brew "nvm"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Object-relational database system
 brew "postgresql@15"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Generic machine emulator and virtualizer
+brew "qemu"
 # Safe, concurrent, practical language
 brew "rust"
 # Build tool for Scala projects
 brew "sbt"
 # Fast and accurate code counter with complexity and COCOMO estimates
 brew "scc"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Graphical network analyzer and capture tool
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Network analyzer and capture tool - without graphical user interface
 brew "wireshark", link: false
 # JavaScript package manager
 brew "yarn"
@@ -95,14 +112,20 @@ cask "1password"
 cask "algodoo"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Virtual Audio Driver
+cask "blackhole-2ch"
 # 3D creation suite
 cask "blender"
 # Web security testing toolkit
 cask "burp-suite"
 # Semantic code analysis engine
 cask "codeql"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Voice and text chat software
 cask "discord"
+# Developer platform
+cask "dotnet-sdk"
 # Web browser
 cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
@@ -111,6 +134,8 @@ cask "flutter"
 cask "gimp"
 # Web browser
 cask "google-chrome"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "google-cloud-sdk"
 # Vector graphics editor
 cask "inkscape"
 # Open source intelligence and graphical link analysis tool
@@ -127,6 +152,10 @@ cask "slack"
 cask "spotify"
 # Learn how to play the piano using falling notes
 cask "synthesia"
+# Platform for 3D content
+cask "unity"
+# Management tool for Unity
+cask "unity-hub"
 # Open-source virtual modular synthesiser
 cask "vcv-rack"
 # OpenVPN client with AppleScript support

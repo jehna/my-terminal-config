@@ -83,6 +83,8 @@
     "COBOL": true,
     "COBOLIT": true,
     "ACUCOBOL": true,
+    "BITLANG-COBOL": true,
+    "RMCOBOL": true,
     "COBOL_MF_LISTFILE": false,
     "COBOL_PCOB_LISTFILE": false,
     "COBOL_ACU_LISTFILE": false,
@@ -90,7 +92,7 @@
     "mfu": false,
     "utreport": false,
     "*": true,
-    "yaml": false,
+    "yaml": true,
     "plaintext": true,
     "markdown": true
   },
@@ -103,8 +105,8 @@
   },
   "editor.guides.indentation": false,
   "dart.debugExternalPackageLibraries": true,
-  "dart.debugSdkLibraries": false,
-  "debug.javascript.autoAttachFilter": "always",
+  "dart.debugSdkLibraries": true,
+  "debug.javascript.autoAttachFilter": "smart",
   "codeQL.telemetry.enableTelemetry": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -118,5 +120,6 @@
   "slint.preview.style": "cupertino-dark",
   "dart.openDevTools": "flutter",
   "gitlens.mode.active": "zen",
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.colorTheme": "Default Dark Modern"
 }

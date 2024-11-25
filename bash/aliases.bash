@@ -47,6 +47,15 @@ function monday() {
 
   # Remove old versions from the cellar
   brew cleanup
+
+  # Clean docker
+  DOCKER_RUNNING=$(docker info 2>/dev/null | grep -c running)
+  if [ "$DOCKER_RUNNING" -gt 0 ]; then
+    yes | docker image prune
+    yes | docker container prune
+    yes | docker volume prune
+    yes | docker system prune
+  fi
 }
 
 # espresso

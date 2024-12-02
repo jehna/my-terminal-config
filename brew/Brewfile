@@ -12,13 +12,17 @@ brew "sqlite"
 brew "ansible"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
+# Command-line tool for interacting with the balenaCloud and balena API
+brew "balena-cli"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Configurable talking characters in ASCII art
+# Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
@@ -28,8 +32,6 @@ brew "docker-buildx"
 brew "docker-compose"
 # Easiest way to build and release mobile apps
 brew "fastlane"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Play, record, convert, and stream audio and video

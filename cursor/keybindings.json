@@ -1,0 +1,84 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+shift+q",
+    "command": "rewrap.rewrapComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+q",
+    "command": "-rewrap.rewrapComment",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+a",
+    "command": "editor.action.reindentlines"
+  },
+  {
+    "key": "alt+shift+tab",
+    "command": "org.decrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+left",
+    "command": "-org.decrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+tab",
+    "command": "org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "alt+right",
+    "command": "-org.incrementContext",
+    "when": "editorLangId == 'org'"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "false"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "extension.pgsql.runCurrentStatement",
+    "when": "editorLangId == 'sql'"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.zoomReset"
+  },
+  {
+    "key": "cmd+numpad0",
+    "command": "-workbench.action.zoomReset"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "sqlite.runDocumentQuery",
+    "when": "editorLangId =~ /(sql|sqlite)/"
+  },
+  {
+    "key": "shift+cmd+q",
+    "command": "-sqlite.runDocumentQuery",
+    "when": "editorLangId =~ /(sql|sqlite)/"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.debug.panel.action.clearReplAction"
+  }
+]

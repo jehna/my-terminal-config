@@ -52,6 +52,8 @@ brew "pinentry"
 brew "gnupg"
 # Command-driven, interactive function plotting
 brew "gnuplot"
+# Tool for glamorous shell scripts
+brew "gum"
 # Dex to Java decompiler
 brew "jadx"
 # Manage your Java environment
@@ -76,6 +78,8 @@ brew "node"
 brew "nvm"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Object-relational database system
@@ -100,18 +104,24 @@ brew "shellcheck"
 brew "tree"
 # Network analyzer and capture tool - without graphical user interface
 brew "wireshark", link: false
+# ISO9660+RR manipulation tool
+brew "xorriso"
 # JavaScript package manager
 brew "yarn"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # The Clojure Programming Language
 brew "clojure/tools/clojure"
+# Packer
+brew "hashicorp/tap/packer"
 # Everything you need to get started with Heroku
 brew "heroku/brew/heroku"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
 # Draw and interact with physical systems
 cask "algodoo"
+# Video calls designed for energy, ideas and action
+cask "around"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Virtual Audio Driver
@@ -142,10 +152,18 @@ cask "google-cloud-sdk"
 cask "inkscape"
 # Open source intelligence and graphical link analysis tool
 cask "maltego"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams"
 # Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Client program for the OpenVPN Access Server
 cask "openvpn-connect"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
 # App wrapper for Postgres
 cask "postgres-unofficial"
 # Team communication and collaboration software
@@ -166,6 +184,10 @@ cask "viscosity"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Create, manage, and run virtual machines
+cask "vmware-fusion"
+# Native desktop client for WhatsApp
+cask "whatsapp"
 # Network protocol analyzer
 cask "wireshark"
 # Open-source version of the X.Org X Window System
@@ -175,6 +197,7 @@ cask "zap"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "1Password for Safari", id: 1569813296
+mas "AdGuard for Safari", id: 1440147259
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694

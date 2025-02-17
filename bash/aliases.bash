@@ -8,11 +8,17 @@
 to_gif() {
     INPUT=$1
     OUTPUT=${2:-${INPUT%.*}.gif}
+    PALETTE="/tmp/palette.png"
 
     CONVERSION_FILTERS="paletteuse=bayer_scale=2:dither=none:diff_mode=rectangle"
 
-    ffmpeg -i "$INPUT" -vf palettegen=stats_mode=diff pipe:.png |
-      ffmpeg -i "$INPUT" -i pipe: -lavfi $CONVERSION_FILTERS -r 30 -gifflags +transdiff "$OUTPUT"
+    # Generate palette first
+    ffmpeg -i "$INPUT" -vf palettegen=stats_mode=diff "$PALETTE" && \
+    # Then use the palette to convert to gif
+    ffmpeg -i "$INPUT" -i "$PALETTE" -lavfi $CONVERSION_FILTERS -r 30 -gifflags +transdiff "$OUTPUT"
+
+    # Clean up
+    rm "$PALETTE"
 }
 
 # find_fucker

@@ -78,6 +78,9 @@
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code"
   },
+  "[git-commit]": {
+    "editor.rulers": [50, 72]
+  },
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
     "COBOL": true,

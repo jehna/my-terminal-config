@@ -39,8 +39,8 @@ function monday() {
   mas upgrade                   # Programmatic App Store update
 
   # Back up recently installed apps and plugins
-  code --list-extensions > ~/.config/vscode/extensions.list                                  # VSConde plugins
-  brew bundle dump -f --file=~/.config/brew/Brewfile --brews --casks --taps --mas --describe # Brewfile (no vscode plugins)
+  cursor --list-extensions > ~/.config/cursor/extensions.list                                # Cursor plugins
+  brew bundle dump -f --file=~/.config/brew/Brewfile --brews --casks --taps --mas --describe # Brewfile (no cursor plugins)
 
   # Upgrading gpg needs a restart, so let's do one just in case
   gpgconf --kill all

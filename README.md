@@ -61,14 +61,14 @@ Ansible automates most things for a fresh MacOS install. The provided
 ansible-playbook ansible/playbook.yml
 ```
 
-### Installing VSCode plugins
+### Installing Cursor plugins
 
-This repository also has a "vscode packages file", wihch you can use to track
-the installed plugins for VSCode. You can install all packages by running:
+This repository also has a "cursor packages file", wihch you can use to track
+the installed plugins for Cursor. You can install all packages by running:
 
 ```
-code --list-extensions | comm -13 - ~/.config/vscode/extensions.list | xargs -I {} code --install-extension {} # Adds new extensions
-code --list-extensions | comm -23 - ~/.config/vscode/extensions.list | xargs -I {} code --uninstall-extension {} # Removes old extensions
+cursor --list-extensions | comm -13 - ~/.config/cursor/extensions.list | xargs -I {} cursor --install-extension {} # Adds new extensions
+cursor --list-extensions | comm -23 - ~/.config/cursor/extensions.list | xargs -I {} cursor --uninstall-extension {} # Removes old extensions
 ```
 
 #### Updating plugin list
@@ -77,7 +77,7 @@ Keeping the plugin list up to date requires manual work (like with Homebrew),
 and you can update the extension list by running:
 
 ```
-code --list-extensions > ~/.config/vscode/extensions.list
+code --list-extensions > ~/.config/cursor/extensions.list
 ```
 
 ## Adding new files

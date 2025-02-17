@@ -52,12 +52,12 @@
           - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
           - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
 
-    - name: "Set VSCode files"
+    - name: "Set Cursor files"
       file:
         state: link
         force: true
-        src: "~/.config/vscode/{{ item }}"
-        dest: "~/Library/Application Support/Code/User/{{ item }}"
+        src: "~/.config/cursor/{{ item }}"
+        dest: "~/Library/Application Support/Cursor/User/{{ item }}"
       loop:
         - "settings.json"
         - "keybindings.json"

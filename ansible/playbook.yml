@@ -3,6 +3,12 @@
   hosts: localhost
   connection: local
   tasks:
+    - name: Change default shell to bash
+      command: chsh -s /bin/bash
+      become: true
+      become_user: "{{ ansible_user_id }}"
+      when: ansible_user_shell != '/bin/bash'
+
     - name: Set scroll direction
       osx_defaults:
         domain: NSGlobalDomain
@@ -47,9 +53,6 @@
         type: array
         value:
           - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Safari.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
-          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
-          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
-          - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Firefox.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
           - <dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>
 
     - name: "Set Cursor files"
@@ -61,6 +64,13 @@
       loop:
         - "settings.json"
         - "keybindings.json"
+
+    - name: Enable Dark Mode
+      osx_defaults:
+        domain: NSGlobalDomain
+        key: AppleInterfaceStyle
+        type: string
+        value: Dark
 
   handlers:
     - name: Restart Dock

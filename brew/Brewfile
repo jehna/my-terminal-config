@@ -2,9 +2,6 @@ tap "clojure/tools"
 tap "dart-lang/dart"
 tap "hashicorp/tap"
 tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/cask-versions"
-tap "homebrew/services"
 tap "michaeleisel/zld"
 # Command-line interface for SQLite
 brew "sqlite"
@@ -12,8 +9,6 @@ brew "sqlite"
 brew "ansible"
 # Official Amazon AWS command-line interface
 brew "awscli"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # Command-line tool for interacting with the balenaCloud and balena API
 brew "balena-cli"
 # Dependency manager for Cocoa projects
@@ -54,6 +49,8 @@ brew "gnupg"
 brew "gnuplot"
 # Tool for glamorous shell scripts
 brew "gum"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # Dex to Java decompiler
 brew "jadx"
 # Manage your Java environment
@@ -108,8 +105,6 @@ brew "wireshark", link: false
 brew "xorriso"
 # JavaScript package manager
 brew "yarn"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
 # The Clojure Programming Language
 brew "clojure/tools/clojure"
 # Packer
@@ -120,8 +115,6 @@ brew "heroku/brew/heroku"
 cask "1password"
 # Draw and interact with physical systems
 cask "algodoo"
-# Video calls designed for energy, ideas and action
-cask "around"
 # Multi-track audio editor and recorder
 cask "audacity"
 # Virtual Audio Driver
@@ -172,8 +165,6 @@ cask "slack"
 cask "spotify"
 # Learn how to play the piano using falling notes
 cask "synthesia"
-# Platform for 3D content
-cask "unity"
 # Management tool for Unity
 cask "unity-hub"
 # Open-source virtual modular synthesiser
@@ -184,8 +175,6 @@ cask "viscosity"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# Create, manage, and run virtual machines
-cask "vmware-fusion"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Network protocol analyzer

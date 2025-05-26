@@ -114,7 +114,17 @@ function cdf() {
   fi
   GIT_ROOT=$(git rev-parse --show-toplevel)
   GIT_ROOT_RELATIVE="$(grealpath --relative-to="$PWD" "$GIT_ROOT")/"
-  SUBDIRS=$(git ls-tree --name-only -d -r HEAD "$GIT_ROOT")
-  SUBDIRS_INCLUDING_ROOT=$(echo -e "$GIT_ROOT_RELATIVE\n$SUBDIRS" | grep -v '^./$')
+  SUBDIRS=$(git ls-tree --name-only -d -r HEAD "$GIT_ROOT" | grep -v '^./$')
+  SUBDIRS_INCLUDING_ROOT=$(echo -e "$GIT_ROOT_RELATIVE\n$SUBDIRS")
   cd "$(echo "$SUBDIRS_INCLUDING_ROOT" | fzf)" || return
 }
+
+# Get the first (or nth) element of a whitespace separated list
+#
+# Usage:
+# first "a b c"
+#
+function first() {
+  awk -v nth="1" '{print $nth}'
+}
+

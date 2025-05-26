@@ -44,6 +44,10 @@ function monday() {
   softwareupdate -ia            # Mac's own software update
   mas upgrade                   # Programmatic App Store update
 
+  # Update node
+  nvm install --lts
+  nvm install --latest-npm
+
   # Back up recently installed apps and plugins
   cursor --list-extensions > ~/.config/cursor/extensions.list                                # Cursor plugins
   brew bundle dump -f --file=~/.config/brew/Brewfile --brews --casks --taps --mas --describe # Brewfile (no cursor plugins)

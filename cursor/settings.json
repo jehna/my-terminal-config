@@ -124,5 +124,6 @@
   "dart.openDevTools": "flutter",
   "gitlens.mode.active": "zen",
   "github.copilot.editor.enableAutoCompletions": true,
-  "workbench.colorTheme": "Default Dark Modern"
+  "workbench.colorTheme": "Default Dark Modern",
+  "cursor.composer.shouldAllowCustomModes": true
 }

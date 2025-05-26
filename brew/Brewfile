@@ -13,14 +13,12 @@ brew "awscli"
 brew "balena-cli"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
-# Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
 # Isolated development environments using Docker
@@ -123,12 +121,16 @@ cask "blackhole-2ch"
 cask "blender"
 # Web security testing toolkit
 cask "burp-suite"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Semantic code analysis engine
 cask "codeql"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker"
 # Developer platform
 cask "dotnet-sdk"
 # Web browser
@@ -159,16 +161,18 @@ cask "openvpn-connect"
 cask "pgadmin4"
 # App wrapper for Postgres
 cask "postgres-unofficial"
+# 3D CAD software
+cask "shapr3d"
 # Team communication and collaboration software
 cask "slack"
-# Music streaming service
-cask "spotify"
 # Learn how to play the piano using falling notes
 cask "synthesia"
 # Management tool for Unity
 cask "unity-hub"
 # Open-source virtual modular synthesiser
 cask "vcv-rack"
+# Virtualiser for x86 hardware
+cask "virtualbox"
 # OpenVPN client with AppleScript support
 cask "viscosity"
 # Open-source code editor

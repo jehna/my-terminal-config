@@ -125,5 +125,6 @@
   "gitlens.mode.active": "zen",
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.colorTheme": "Default Dark Modern",
-  "cursor.composer.shouldAllowCustomModes": true
+  "cursor.composer.shouldAllowCustomModes": true,
+  "update.releaseTrack": "prerelease"
 }

@@ -66,6 +66,12 @@ function monday() {
     yes | docker volume prune
     yes | docker system prune
   fi
+
+  # Update all global NPM packages
+  npm update --global
+
+  # Back up globally installed NPM packages
+  npm list --global --depth=0 --json > ~/.config/npm/packages.list
 }
 
 # espresso

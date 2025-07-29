@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 .java-version
 .calva
+**/.claude/settings.local.json

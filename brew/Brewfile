@@ -77,6 +77,8 @@ brew "ollama"
 brew "p7zip"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Cross-platform library for audio I/O
+brew "portaudio"
 # Object-relational database system
 brew "postgresql@15"
 # Python version management
@@ -97,6 +99,8 @@ brew "sevenzip"
 brew "shellcheck"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Port of OpenAI's Whisper model in C/C++
+brew "whisper-cpp"
 # Network analyzer and capture tool - without graphical user interface
 brew "wireshark", link: false
 # ISO9660+RR manipulation tool
@@ -115,6 +119,8 @@ cask "1password"
 cask "algodoo"
 # Multi-track audio editor and recorder
 cask "audacity"
+# 3D model slicing software for 3D printers, maintained by Bambu Lab
+cask "bambu-studio"
 # Virtual Audio Driver
 cask "blackhole-2ch"
 # 3D creation suite
@@ -130,19 +136,19 @@ cask "cursor"
 # Voice and text chat software
 cask "discord"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Developer platform
 cask "dotnet-sdk"
 # Web browser
 cask "firefox"
 # UI toolkit for building applications for mobile, web and desktop
 cask "flutter"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
 # Free and open-source image editor
 cask "gimp"
 # Web browser
 cask "google-chrome"
-# Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
 # Vector graphics editor
 cask "inkscape"
 # Open source intelligence and graphical link analysis tool
@@ -171,7 +177,7 @@ cask "synthesia"
 cask "unity-hub"
 # Open-source virtual modular synthesiser
 cask "vcv-rack"
-# Virtualiser for x86 hardware
+# Virtualiser for arm64 hardware
 cask "virtualbox"
 # OpenVPN client with AppleScript support
 cask "viscosity"
@@ -179,10 +185,12 @@ cask "viscosity"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Create, manage, and run virtual machines
+cask "vmware-fusion"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Network protocol analyzer
-cask "wireshark"
+cask "wireshark-app"
 # Open-source version of the X.Org X Window System
 cask "xquartz"
 # Free and open source web app scanner

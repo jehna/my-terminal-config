@@ -1,5 +1,4 @@
-#!/bin/bash
-set -euo pipefail
+#!/bin/bash --login
 
 # Manually run repetitive tasks (like installing updates). Should be ran on
 # every Monday.
@@ -9,6 +8,8 @@ brew upgrade                  # Upgraade most Homebrew packages
 brew upgrade --cask --greedy  # Upgrade apps that have auto-update feature
 softwareupdate -ia            # Mac's own software update
 mas upgrade                   # Programmatic App Store update
+
+set -euo pipefail
 
 # Update node
 nvm install --lts

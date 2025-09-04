@@ -1,6 +1,3 @@
-#!/bin/bash
-set -euo pipefail
-
 # A fuzzy finder for a subdirectory
 #
 # Uses git to limit the amount of directories to search, otherwise good luck on

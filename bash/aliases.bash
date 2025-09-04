@@ -14,3 +14,16 @@ if [ -d "$SCRIPTS_DIR" ]; then
 fi
 
 unset SCRIPTS_DIR
+
+SOURCES_DIR="$(dirname "${BASH_SOURCE[0]}")/sources"
+
+if [ -d "$SOURCES_DIR" ]; then
+    for script in "$SOURCES_DIR"/*.sh; do
+        if [ -f "$script" ]; then
+            script_name=$(basename "$script" .sh)
+            alias "$script_name"="source $script"
+        fi
+    done
+fi
+
+unset SOURCES_DIR

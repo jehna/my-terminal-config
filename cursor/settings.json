@@ -73,7 +73,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "files.associations": {
-    "COMMIT_EDITMSG": "git-commit"
+    "COMMIT_EDITMSG": "git-commit",
+    "*.service": "ini"
   },
   "[dart]": {
     "editor.defaultFormatter": "Dart-Code.dart-code"
@@ -109,7 +110,7 @@
   "editor.guides.indentation": false,
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
-  "debug.javascript.autoAttachFilter": "smart",
+  "debug.javascript.autoAttachFilter": "disabled",
   "codeQL.telemetry.enableTelemetry": true,
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -126,5 +127,8 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "workbench.colorTheme": "Default Dark Modern",
   "cursor.composer.shouldAllowCustomModes": true,
-  "update.releaseTrack": "prerelease"
+  "update.releaseTrack": "prerelease",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -72,6 +72,13 @@
         src: "~/.config/npm/npmrc"
         dest: "~/.npmrc"
 
+    - name: "Set claude folder"
+      file:
+        state: link
+        force: true
+        src: "~/.config/claude"
+        dest: "~/.claude"
+
     - name: Enable Dark Mode
       osx_defaults:
         domain: NSGlobalDomain

@@ -37,10 +37,9 @@ Start by understanding the current project context, then ask questions one at a 
 
 ## After the Design
 
-**Implementation (if continuing):**
-
-- Ask: "Ready to set up for implementation?"
-- Use subagents for implementation
+- Ask user what they want to do next
+  - Continue with implementation?
+  - Write a plan document?
 
 ## Key Principles
 

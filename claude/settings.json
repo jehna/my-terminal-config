@@ -4,8 +4,9 @@
     "command": "~/.claude/statusline.sh"
   },
   "enabledPlugins": {
-    "superpowers@superpowers-marketplace": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "superpowers@superpowers-marketplace": false,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true
 }

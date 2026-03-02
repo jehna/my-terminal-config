@@ -39,6 +39,7 @@ Start by understanding the current project context, then ask questions one at a 
 
 - Ask user what they want to do next
   - Continue with implementation?
+    - NOTE: Use task tracking!
   - Write a plan document?
 
 ## Key Principles

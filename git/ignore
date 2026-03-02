@@ -4,3 +4,4 @@ node_modules
 .java-version
 .calva
 **/.claude/settings.local.json
+.worktrees

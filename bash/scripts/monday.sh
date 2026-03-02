@@ -23,7 +23,7 @@ brew bundle dump -f --file=~/.config/brew/Brewfile --brews --casks --taps --mas 
 gpgconf --kill all
 
 # Remove old versions from the cellar
-brew cleanup
+brew cleanup --prune=all
 
 # Clean docker
 DOCKER_RUNNING=$(docker info 2>/dev/null | grep -c running)

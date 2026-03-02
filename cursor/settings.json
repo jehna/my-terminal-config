@@ -130,5 +130,6 @@
   "update.releaseTrack": "prerelease",
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "terminal.integrated.defaultLocation": "editor"
 }

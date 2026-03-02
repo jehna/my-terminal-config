@@ -2,3 +2,6 @@
 !.gitignore
 !settings.json
 !*.sh
+!skills
+!skills/*
+!skills/**/*

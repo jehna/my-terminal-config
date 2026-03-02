@@ -11,3 +11,6 @@ export GREP_OPTIONS="--color"
 
 # Don't save line to bash history if it starts with a space
 export HISTCONTROL=ignorespace
+
+# UV executables
+export PATH="/Users/jesseluoto/.local/bin:$PATH"

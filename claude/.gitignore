@@ -5,3 +5,4 @@
 !skills
 !skills/*
 !skills/**/*
+!docker/Dockerfile

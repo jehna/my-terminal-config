@@ -1,6 +1,7 @@
 ---
 name: commit-push
 description: "Commit + Push"
+disable-model-invocation: true
 ---
 
 When your work is good to go, let's work towards creating a pull request to Github.
@@ -14,3 +15,6 @@ When your work is good to go, let's work towards creating a pull request to Gith
     * Commit title MUST start specifically with one of: `Add`, `Change`, `Remove` or `Fix` without `:`
     * Commit title MUST be max 50 characters. Use `echo "Add title that describes WHAT here" | wc -c` to ensure. Iterate until <= 50 chars.
     * Commit SHOULD include a descriptive commit body message that explains _WHY_
+3. Rebase to keep the history perfect
+    * The commit history of a feature branch MUST read as a story of how the feature would have been built in the perfect world
+    * Rebase often to amend relevant changes to commits they belong to

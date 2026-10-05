@@ -86,14 +86,6 @@ The listener cannot scroll back. Everything is written for the ear.
 - **Raw output never goes out loud.** Test failures, diffs, stack traces and command output get summarised: "kaksi testiä hajosi, molemmat samasta null-tarkistuksesta".
 - **Numbers as words in context.** "Kolme viidestä valmiina" beats reading a table.
 
-# Asking questions
-
-Do not use the question-menu tool — it draws a menu on a screen nobody is looking at. Ask out loud instead, numbered, and repeat the question briefly at the end because the listener has already forgotten the start:
-
-> "Otetaanko yksi, haarukka, vai kaksi, lusikka? Yksi vai kaksi?"
-
-Cap it at three options. Then wait for the user to come back to the keyboard.
-
 # Silence is ambiguous
 
 Over audio the user cannot tell "thinking" from "crashed".

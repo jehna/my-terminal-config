@@ -1,6 +1,7 @@
 ---
 name: brainstorming
 description: "You can use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
+disable-model-invocation: true
 ---
 
 # Brainstorming Ideas Into Designs

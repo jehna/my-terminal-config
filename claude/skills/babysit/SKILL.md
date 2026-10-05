@@ -1,6 +1,7 @@
 ---
 name: babysit
 description: "Babysit a pull request after opening one"
+disable-model-invocation: true
 ---
 
 # Ensure there's a PR
@@ -12,6 +13,10 @@ If there's not a pull request yet, create one.
 After opening a pull request, start a `/loop` to poll for:
 * Any comments to said pull request
 * Failing CI
+
+# Ensure the PR is rebased to latest `main` branch
+
+If it falls behind, rebase and force push
 
 # In case of a comment
 
